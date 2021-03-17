@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Step 1 Git') {
             steps {
-                git 'https://github.com/ParijatMoulik/Scientific_Calculator.git'
+                git 'https://github.com/ParijatMoulik/Scientific_Calculator_CLI.git'
                 //sh './mvnw clean compile'
             }
         }
@@ -34,7 +34,7 @@ pipeline {
           {
               steps {
                   script {
-                    imageName = docker.build "jerry11/devopscalculator:latest"
+                    imageName = docker.build "jerry11/scientificcalculatorcli:latest"
                     }
               }
           }
